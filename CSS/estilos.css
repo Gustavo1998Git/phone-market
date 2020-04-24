@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Gochi+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fascinate+Inline|Fugaz+One|Luckiest+Guy|Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap');
+@import url(menu.css);
+@import url(imagenPrin.css);
+@import url(animacion.css);
+@import url(vendido.css);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gochi Hand', cursive;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    background: rgba(230, 133, 8, 0.938);
+    color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.contenedor {
+    width: 98%;
+    margin: auto;
+}
+
+h1 {
+    float: left;
+    font-family: 'Fascinate Inline', cursive;
+}
+
+footer .contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 25px;
+}
+
+.copy {
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.sociales {
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+}
+
+.sociales a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+a.link,
+p.copy {
+    display: flex;
+    align-items: center;
+}
+
+@media (min-width:768px) {
+    .sociales {
+        width: auto;
+    }
+    footer .contenedor {
+        justify-content: space-between;
+    }
+}
+
+@media (min-width:1024px) {
+    .contenedor {
+        width: 1000px;
+    }
+}

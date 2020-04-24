@@ -1,0 +1,55 @@
+body{
+    background: #00FFFF;
+    font-family: Arial;
+}
+
+img{
+    width: 100px;
+height: 100px;
+}
+
+#main-container{
+    margin: 150px auto;
+    width: 700px;
+    text-align: center;
+}
+
+table {
+     background-color: white;
+text-align-last: center;
+    width: 90%;
+    border-collapse: collapse;
+   
+
+
+ }
+
+ th{
+     padding: 20px;
+     text-align: center;
+ }
+
+ td {
+     text-align: center;
+    padding: 4px;
+    
+ }
+
+ thead{
+     background-color: turquoise;
+     border-bottom: solid 5px rgb(212, 245, 65);
+     color:white;
+     text-align: center;
+ }
+
+ tr:nth-child(even){
+background-color: #ddd;
+
+ 
+ }
+
+ tr:hover td{
+     background-color: #369681;
+     color: white;
+     
+ }

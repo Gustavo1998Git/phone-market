@@ -1,0 +1,230 @@
+form {
+    width: 450px;
+    margin: auto;
+    background: rgba(52, 246, 198, 0.4);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 7px;
+}
+
+h2 {
+    color: rgb(7, 3, 231);
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+}
+
+input,
+textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border: none;
+}
+
+textarea {
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
+}
+
+#boton {
+    background: #035be7;
+    color: #fff;
+    padding: 20px;
+}
+
+#boton:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    form {
+        width: 100%;
+    }
+}
+
+.comments-containner {
+    margin: 60px auto 15px;
+    width: 768px;
+}
+
+.comments-containner h4 {
+    font-size: 36px;
+    color: #283035;
+    font-weight: 400;
+}
+
+.comments-containner h4 a {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.comments-list {
+    margin-top: 30px;
+    position: relative;
+}
+
+.comments-list li {
+    margin-bottom: 15px;
+    display: block;
+    position: relative;
+}
+
+.comments-list li:after {
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+    width: 0;
+}
+
+.comments-list .comment-avatar {
+    width: 65px;
+    height: 65px;
+    position: relative;
+    left: 160px;
+    z-index: 300;
+    float: left;
+    border: 3px solid #fff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.comments-list .comment-avatar img {
+    width: 100%;
+    height: 100%;
+}
+
+.comments-list .comment-box {
+    width: 1000px;
+    float: right;
+    left: -60px;
+    position: relative;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+.comments-list .comment-box:after {
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    display: block;
+    border-width: 10px 12px 10px 0;
+    border-style: solid;
+    border-color: transparent #e0f890;
+    top: 8px;
+    left: -11px;
+}
+
+.comment-box .comment-head {
+    background: #e0f890;
+    padding: 10px 12px;
+    border-bottom: 1px solid #e5e5e5;
+    overflow: hidden;
+    -web-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+}
+
+.comment-box .comment-head i {
+    float: right;
+    margin-left: 14px;
+    position: relative;
+    top: 2px;
+    color: #a6a6a6;
+    cursor: pointer;
+    -webkit-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+}
+
+.comment-box .comment-head i:hover {
+    color: #03658c;
+}
+
+.comment-box .comment-name {
+    color: #283035;
+    font-size: 14px;
+    font-weight: 700;
+    float: left;
+    margin-right: 10px;
+}
+
+comment-box .comment-name a {
+    color: #283035;
+}
+
+comment-box .comment-head span {
+    float: left;
+    color: #999;
+    font-size: 13px;
+    position: relative;
+    top: 1px;
+}
+
+.comment-box .comment-content {
+    background: #fff;
+    padding: 12px;
+    font-size: 15px;
+    color: #595959;
+    -webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
+}
+
+.comment-box .comment-name.by-author,
+.comment-box .comment-name.by-author a {
+    color: #03658c;
+}
+
+.comment-box .comment-name.by-author:after {
+    content: "autor";
+    background: #fff;
+    font-size: 12px;
+    padding: 3px 5px;
+    -webkit-webkit: border radius 3px;
+    -moz-webkit: border radius 3px;
+    border-radius: 3px;
+}
+
+.paginacion {
+    margin: 20px 0;
+}
+
+.paginacion ul {
+    list-style: none;
+    text-align: center;
+}
+
+.paginacion ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.paginacion ul li a {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    background: #035be7;
+    text-decoration: none;
+}
+
+.paginacion ul li a:hover {
+    background: #e0f890;
+}
+
+.paginacion ul li .active {
+    background: #e0f890;
+    font-weight: bold;
+}

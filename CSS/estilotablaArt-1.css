@@ -1,0 +1,77 @@
+body {
+    background: #00ffff;
+    font-family: Arial;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+#main-container {
+    margin: 150px auto;
+    width: 700px;
+    text-align: center;
+    padding: 2em;
+}
+
+table {
+    background-color: white;
+    text-align-last: center;
+    width: 90%;
+    border-collapse: collapse;
+}
+
+th {
+    padding: 20px;
+    text-align: center;
+}
+
+td {
+    text-align: center;
+    padding: 4px;
+}
+
+thead {
+    background-color: turquoise;
+    border-bottom: solid 5px rgb(212, 245, 65);
+    color: white;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #ddd;
+}
+
+tr:hover td {
+    background-color: #369681;
+    color: white;
+}
+
+
+/*EstilosBotonAgregarCarrito*/
+
+.button {
+    background: #06a806;
+    color: #fff;
+    display: inline-block;
+    font-size: 1.25em;
+    margin: 20px;
+    padding: 10px 0px;
+    text-align: center;
+    width: 140px;
+    text-decoration: none;
+    box-shadow: 0px 3px 0px #083a08;
+}
+
+.button span {
+    margin-right: 10px;
+}
+
+
+/*Colores*/
+
+.button.green {
+    background: rgb(4, 141, 4);
+    box-shadow: rgb(2, 49, 2);
+}

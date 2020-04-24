@@ -1,0 +1,65 @@
+body {
+    background: #fff;
+}
+
+.collection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 250px);
+    grid-auto-rows: 400px;
+    grid-gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 4em;
+}
+
+article {
+    border: #00ffff;
+    background: #fff;
+    border-radius: 5px;
+    text-align: center;
+}
+
+img {
+    width: 200px;
+    height: 250px;
+    padding-top: 0.5em;
+}
+
+.collection #alcatel {
+    width: 60%;
+    height: 90%;
+}
+
+main {
+    clear: both;
+    display: inline-block;
+    width: 90%;
+}
+
+
+/*EstilosBotonAgregarCarrito*/
+
+.button {
+    background: #06a806;
+    color: #fff;
+    display: inline-block;
+    font-size: 1.25em;
+    margin: 20px;
+    padding: 10px 0px;
+    text-align: center;
+    width: 200px;
+    text-decoration: none;
+    box-shadow: 0px 3px 0px #083a08;
+}
+
+.button span {
+    margin-right: 10px;
+}
+
+
+/*Colores*/
+
+.button.green {
+    background: rgb(4, 141, 4);
+    box-shadow: rgb(2, 49, 2);
+}

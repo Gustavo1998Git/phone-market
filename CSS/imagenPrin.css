@@ -1,0 +1,61 @@
+#iphone {
+    margin-top: 50px;
+    position: relative;
+}
+
+#iphone img {
+    width: 100%;
+    height: 100%;
+}
+
+#iphone .contenedor {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: crimson;
+}
+
+#iphone h2 {
+    font-size: 28px;
+}
+
+#iphone a {
+    display: block;
+    width: 100px;
+    color: rgb(133, 32, 14);
+    text-decoration: none;
+    padding: 7px;
+    margin-top: 10px;
+    border: 3px solid rgb(133, 32, 14);
+}
+
+#iphone a:hover {
+    background: rgba(38, 90, 92, 0.5);
+}
+
+@media(min-width:480px) {
+    #iphone h2 {
+        font-size: 40px;
+    }
+    #iphone a {
+        margin-top: 25px;
+    }
+}
+
+@media(min-width:768px) {
+    #iphone {
+        height: 300px;
+        overflow: hidden;
+    }
+    #iphone img {
+        height: auto;
+        margin-top: -100px;
+    }
+}
+
+@media(min-width:1024px) {
+    #iphone img {
+        margin-top: -400px;
+    }
+}

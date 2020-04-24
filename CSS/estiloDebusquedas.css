@@ -1,0 +1,22 @@
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.uno {
+    padding: 3em;
+    float: center;
+    left: 100px;
+}
+
+.dos {
+    padding: 3em;
+    float: center;
+    right: 100px;
+}
+
+.tres {
+    padding: 3em;
+    float: center;
+    left: 100px;
+}

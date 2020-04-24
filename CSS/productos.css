@@ -1,0 +1,36 @@
+.prod h2 {
+    font-size: 35px;
+}
+
+.prod img {
+    width: 80%;
+    height: 80%;
+}
+
+
+/*EstilosBotonAgregarCarrito*/
+
+.button {
+    background: #06a806;
+    color: #fff;
+    display: inline-block;
+    font-size: 1.25em;
+    margin: 20px;
+    padding: 10px 0px;
+    text-align: center;
+    width: 140px;
+    text-decoration: none;
+    box-shadow: 0px 3px 0px #083a08;
+}
+
+.button span {
+    margin-right: 10px;
+}
+
+
+/*Colores*/
+
+.button.green {
+    background: rgb(4, 141, 4);
+    box-shadow: rgb(2, 49, 2);
+}
