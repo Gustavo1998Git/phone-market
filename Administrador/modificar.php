@@ -43,10 +43,10 @@ session_start();
 </br>
 
 <?php 
-$nom=$_GET['Nombre'];
-$nom2=$nom;
+$Id=$_GET['Id'];
 $mysql = new mysqli("localhost", "root", "", "phone-market");
-$Query = "select * from productos where Nombre='".$nom."'";
+$Query = "select * from productos where Id='".$Id."'";
+
 $Result = $mysql->query( $Query );
 
 while($row =$Result->fetch_array()) {	    
@@ -54,11 +54,11 @@ while($row =$Result->fetch_array()) {
 
    <form action="guardarCambios.php" target="" method="POST">
             <TABLE  ALIGN="CENTER"  style="margin: auto;" >
-                <TR>
-                    <th><strong>Id:</strong> </th>
-                    <td><input type=text size=40 name="Id" value="<?php printf($row["Id"]); ?>"></td>
+              
+                 <TR>
+                    <th><strong>ID:</strong> </th>
+                    <td><input type=text size=40 name="Id" value=" <?php printf($row["Id"]); ?>  " readonly></td>
                 </TR>
-               
                 <TR>
                     <th><strong>Nombre:</strong> </th>
                     <td><input type=text size=40 name="Nombre" value=" <?php printf($row["Nombre"]); ?>  "></td>
@@ -73,20 +73,14 @@ while($row =$Result->fetch_array()) {
                 </TR>
                 <TR>
                     <th><strong>Precio: </strong> </th>
-                    <td><input type=text size=40 name="Precio" value=" <?php printf($row["Precio"]); ?>  "></td>
-                </TR>
-                 <TR>
-                    <th><strong>Tipo: </strong> </th>
-                    <td><input type=text size=40 name="Tipo" value=" <?php printf($row["Tipo"]); ?>  ">
-                    <input type="hidden" name="nombrev" value="<?php printf($nom); ?>">
+                    <td><input type=text size=40 name="Precio" value=" <?php printf($row["Precio"]); ?>  ">
                     </td>
+
                 </TR>
-                
-                
             </TABLE>
             <BR>
                 <BR>
-            <center> <input type=submit value="Modicar" id="boton"></center>
+            <center> <input type=submit value="Modicar" Id="boton"></center>
                         
         </form>
         

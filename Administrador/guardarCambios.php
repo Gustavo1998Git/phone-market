@@ -42,14 +42,12 @@ $Nombre=$_POST["Nombre"];
 $Descripcion=$_POST["Descripcion"];
 $Existencias=$_POST["Existencias"];
 $Precio=$_POST["Precio"];
-$Tipo=$_POST["Tipo"];
-$nombre2=$_POST["nombrev"];
 
 
 $mysql = new mysqli("localhost", "root", "", "phone-market");
 
 
-    $Query= "UPDATE productos SET Id='$Id',Nombre='$Nombre', Descripcion='$Descripcion', Existencias='$Existencias', Precio='$Precio', Tipo='$Tipo' WHERE Nombre='".$nombre2."'";
+    $Query= "UPDATE productos SET Nombre='$Nombre', Descripcion='$Descripcion', Existencias='$Existencias', Precio='$Precio' WHERE Id='".$Id."'";
 
     $Result = $mysql->query( $Query );
 

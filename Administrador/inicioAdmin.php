@@ -14,6 +14,8 @@ session_start();
     <link rel="stylesheet" href="../CSS/animacion.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
     <script src="https://kit.fontawesome.com/31c84912e2.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/31c84912e2.js" crossorigin="anonymous"></script>
+
     <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline|Fugaz+One|Luckiest+Guy|Vibes&display=swap" rel="stylesheet">
     <style>
        *{ 
@@ -142,6 +144,28 @@ session_start();
                         <a href="../Administrador/eliminar.php">
                         <img src="../imagenes/eliminar.jpg" alt=""></a>
                         <h4>Eliminar</h4>
+                  
+                </div>
+            </section>
+
+            <section id="info2">
+                <br/><br/>
+                <h3>Opciones de UsuarioAdministrador</h3>
+                <div class="contenedor">
+                    <div class="info-pet">
+                        <a href="../Administrador/Registrarse.php">
+                        <img src="../imagenes/agregarUsu.jpg" alt=""></a>
+                        <h4>Agregar nuevo administrador</h4>
+                    </div>
+                    <div class="info-pet">
+                        <a href="../Administrador/modificaAdmi.php">
+                        <img src="../imagenes/modificarUsu.jpg" alt=""></a>
+                        <h4>Modificar Administrador</h4>
+                    </div>
+                    <div class="info-pet">
+                        <a href="../Administrador/eliminarAdmi.php">
+                        <img src="../imagenes/eliminarUsu.jpg" alt=""></a>
+                        <h4>Eliminar Administrador</h4>
                   
                 </div>
             </section>

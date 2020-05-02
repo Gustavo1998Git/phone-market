@@ -8,15 +8,19 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Inicio</title>
-    <link rel="stylesheet" href="../CSS/tabla.css">
-    <link rel="stylesheet" href="../CSS/estilos.css">
+      <link rel="stylesheet" href="../CSS/estilos.css">
     <link rel="stylesheet" href="../fonts/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
     <link rel="stylesheet" href="../CSS/animacion.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
-
+    <script src="https://kit.fontawesome.com/31c84912e2.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline|Fugaz+One|Luckiest+Guy|Vibes&display=swap" rel="stylesheet">
+    <style>
+       *{ 
+           font-family: 'Quicksand', sans-serif;   
+       } </style>
+    <title>Inicio</title>
+  
 
 </head>
 
@@ -36,47 +40,28 @@ session_start();
                   </label>
             </ul>
     </div>
-<h1>Operacion Modificar</h1>
-
-</br>
-</br>
-</br>
-</br>
-<h2>Haga clic sobre el producto a modificar </h2>
-
-
-</br>
-
+    <div style="width: 1000px; height: 500px;"> 
+</br></br></br></br>
 <?php 
+
+
+
 $mysql = new mysqli("localhost", "root", "", "phone-market");
-$Query = "select * from productos";
+         $Query= "INSERT INTO administradores  (Nombre,APaterno,AMaterno,CorreoElect,Telefono,Usuario,Contrasenia,SocioOempleado)VALUES ('".$_POST["nom"]."','".$_POST["appat"]."','".$_POST["apmat"]."','".$_POST["cor"]."','".$_POST["tel"]."','".$_POST["usu"]."','".$_POST["con"]."','".$_POST["tipo"]."')";
+
 $Result = $mysql->query( $Query );
 
-
-	 $numeroRegistros=$Result->num_rows;   if($numeroRegistros<=0) 
-   { 
-     echo "<div align='center'>"; 
-     echo "<h2>No se encontraron resultados</h2>"; 
-     echo "</div><hr> "; 
-   }else{
-   ?>
-       <table  style="margin: auto;">
-        <tr>
-		<th> Nombre</th>
-		</tr>
-		<?php
-        while($row =$Result->fetch_array()) {	  
-        $id=$row["Id"];
-		$nom=$row["Nombre"];
-           ?>
-		   <tr>
-		   <td> <a href="modificar.php?Id=<?php print($id); ?>"> <?php print($nom); ?> </a>  </td>
-		  
-
-           </tr>
-<?php	}
+if($Result!=null){
+   	print("Su Registro Fue exitoso, puede iniciar sesion");
 }
-?>
-</table>
+else{
+  	print("No se pudo agregar");
+
+}
+
+	 
+   ?>
+</div>
+ </body>
 </body>
 </html>

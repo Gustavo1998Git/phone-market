@@ -57,7 +57,8 @@ session_start();
     <p> <h2>Precio</h2> <input type="text" name="Pre"></p>
     <p> <h2>Imagen</h2> 
 
- <form name="subida-imagenes" type="POST" enctype="multipart/formdata" ><input type="file" name="imagen" />
+ <form name="subida-imagenes" type="POST" enctype="multipart/formdata" >
+ <input type="file" name="imagen" accept="image/gif,image/png,image/jpg"  />
  <!--<p> <label>Imagen Informacion</label>
  <form name="subida-imagenes" type="POST" enctype="multipart/formdata" ><input type="file" name="imagen" />-->
 
