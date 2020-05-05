@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-04-2020 a las 18:45:32
+-- Tiempo de generación: 04-05-2020 a las 17:02:27
 -- Versión del servidor: 10.4.6-MariaDB
 -- Versión de PHP: 7.3.8
 
@@ -21,6 +21,32 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `phone-market`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `administradores`
+--
+
+CREATE TABLE `administradores` (
+  `Nombre` varchar(50) NOT NULL,
+  `APaterno` varchar(50) NOT NULL,
+  `AMaterno` varchar(50) NOT NULL,
+  `CorreoElect` varchar(50) NOT NULL,
+  `Telefono` varchar(10) NOT NULL,
+  `Usuario` varchar(10) NOT NULL,
+  `Contrasenia` varchar(50) NOT NULL,
+  `SocioOempleado` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `administradores`
+--
+
+INSERT INTO `administradores` (`Nombre`, `APaterno`, `AMaterno`, `CorreoElect`, `Telefono`, `Usuario`, `Contrasenia`, `SocioOempleado`) VALUES
+('Gustavo', 'Quezada', 'Tezoco', 'gustavo78@gmail.com', '1234567812', 'GusQT', '12345', 'Socio'),
+('Concepcion', 'Nava', 'Arteaga', 'ingsoftwareito@gmail.com', '2723456732', 'Concepcion', '12345', 'Empleado'),
+('Jose Antonio', 'Marquez', 'Gracian', 'JoseAntPepe@gmail.com', '272987476', 'pepe1998', '12345', 'Socio');
 
 -- --------------------------------------------------------
 
@@ -54,7 +80,10 @@ INSERT INTO `compras` (`id`, `numeroventa`, `nombre`, `imagen`, `precio`, `canti
 (9, 6, 'Audifonos Inalambricos Skullkandy', 'Skullkandy-Inalambricos.png', 1900, 1, 1900),
 (10, 7, 'Audifonos Inalambricos Skullkandy', 'Skullkandy-Inalambricos.png', 1900, 1, 1900),
 (11, 7, 'Skullkandy HESH', 'Skullkandy-HESH.jpg', 1800, 1, 1800),
-(12, 8, 'Skullkandy HESH', 'Skullkandy-HESH.jpg', 1800, 2, 3600);
+(12, 8, 'Skullkandy HESH', 'Skullkandy-HESH.jpg', 1800, 2, 3600),
+(13, 9, 'MOTOROLA ONE VISION	', 'moto-one-vision.jpg', 8000, 3, 24000),
+(14, 9, ' Tablet Alcatel 3T  Pro', 'Alcatel3T.jpg', 5000, 3, 15000),
+(15, 9, 'Audifonos SONY AKG 701	', 'AKG-K-701-SONY.jpg', 1700, 1, 1700);
 
 -- --------------------------------------------------------
 
@@ -103,7 +132,7 @@ CREATE TABLE `productos` (
 
 INSERT INTO `productos` (`Id`, `Nombre`, `Descripcion`, `Existencias`, `Precio`, `Img`, `ImgDt`, `Tipo`, `Estado`, `Orden`) VALUES
 (2, 'SAMSUNG GALAXI S10', 'GAMA ALTA', 13, 18000, 'samsungs10.png', 'samsungs10128gbtexto.png', 'Celular', 1, 2),
-(3, 'XIAOMI MI 9T PRO	', 'GAMA MEDIA ALTA', 43, 7899, 'xiaomimi9tpro.png', 'xiaomimi9tprotexto.png', 'Celular', 1, 3),
+(3, ' XIAOMI MI 9T PRO	  ', ' GAMA MEDIA ALTA  ', 1, 7899, 'xiaomimi9tpro.png', 'xiaomimi9tprotexto.png', 'Celular', 1, 3),
 (4, 'XIAOMI REDMI NOTE 8 PRO	', 'GAMA MEDIA ALTA', 19, 4900, 'xiaomi-redmi-note-8-pro-128gb-dual-sim-verde.jpg', 'xiaomiredminote8pro128gbdualsimverde texto.jpg', 'Celular', 1, 4),
 (5, 'HUAWEI Y9 2019	', 'GAMA MEDIA', 33, 3499, 'y9-2019.png', 'y92019texto.png', 'Celular', 1, 5),
 (6, 'MOTO Z4 64GB', 'GAMA ALTA', 19, 7899, 'Motorola-Moto-Z4.jpg', 'MotorolaMotoZ4texto.jpg', 'Celular', 1, 6),
@@ -119,7 +148,7 @@ INSERT INTO `productos` (`Id`, `Nombre`, `Descripcion`, `Existencias`, `Precio`,
 (16, 'IPHONE 11 PRO-MAX-PLATA	', 'GAMA ALTA', 50, 28999, 'iphone-11-promax-plata-doble.png', 'iphone11promaxplatadobletexto.png', 'Celular', 1, 16),
 (17, 'IPHONE 11 64GB AMARILLO	', 'Gama alta	', 55, 21999, 'apple-iphone-11-64gb-amarillo.png', 'appleiphone1164gbamarillotexto.png', 'Celular', 1, 17),
 (18, 'IPHONE 11 PRO 256GB	', 'Gama alta	', 64, 41999, 'iphone-11-pro.png', 'iphone11protexto.png', 'Celular', 1, 18),
-(19, 'Tablet Alcatel 3T', 'GAMA MEDIA BAJA', 44, 3999, 'Alcatel3T.jpg', 'Alcatel3T_texto.jpg', 'Tablet', 1, 19),
+(19, ' Tablet Alcatel 3T  Pro', ' GAMA MEDIA ALTA  ', 20, 5000, 'Alcatel3T.jpg', 'Alcatel3T_texto.jpg', 'Tablet', 1, 19),
 (20, 'Ipad pro 11 pulgadas 64GB	', 'Gama media alta	', 33, 17499, 'ipad-pro-11-pulgadas.jpg', 'ipadpro11pulgadas64gbTEXTO.jpg', 'Tablet', 1, 20),
 (21, 'IPAD PRO	', 'Gama alta	', 33, 19899, 'ipad-pro.png', 'ipadprotexto.png', 'Tablet', 1, 21),
 (22, 'IPAD X 2019', 'Gama alta', 55, 21899, 'ipad-x.jpg', 'ipadxTEXTO.jpg', 'Tablet', 1, 22),
@@ -141,6 +170,33 @@ INSERT INTO `productos` (`Id`, `Nombre`, `Descripcion`, `Existencias`, `Precio`,
 (38, 'Samsung gear sport 1.2', 'Samsung gear sport 1.2 deportivo	', 30, 3490, 'samsung-gear-sport-1.2.png', 'samsunggearsport1.2texto.png', 'Accesorios', 1, 38),
 (39, 'Samsung active 2019 r500', 'Deportivo para hombres que les guste sudar en el ejercicio.	', 40, 4690, 'smartwatch-reloj-active.jpg', 'samsunggalaxywatchr500texto.jpg', 'Accesorios', 1, 39),
 (40, 'Redmi Note 9s', 'Bateria para todo el dia,vive cada momento con su espectacular camara con IA de 64MP ', 400, 9000, 'Redmi-Note-9s.jpg', '', 'Celular', 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `quienrecibe`
+--
+
+CREATE TABLE `quienrecibe` (
+  `Nombre` varchar(50) NOT NULL,
+  `APaterno` varchar(50) NOT NULL,
+  `AMaterno` varchar(50) NOT NULL,
+  `Direccion` varchar(50) NOT NULL,
+  `CP` varchar(5) NOT NULL,
+  `Telefono` varchar(10) NOT NULL,
+  `TitularCard` varchar(50) NOT NULL,
+  `Cuenta` varchar(16) NOT NULL,
+  `FechaVencimiento` varchar(5) NOT NULL,
+  `CodigoCCV` varchar(3) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `quienrecibe`
+--
+
+INSERT INTO `quienrecibe` (`Nombre`, `APaterno`, `AMaterno`, `Direccion`, `CP`, `Telefono`, `TitularCard`, `Cuenta`, `FechaVencimiento`, `CodigoCCV`) VALUES
+('Cris', 'Glez', 'Najera', 'los alamos', '94123', '2711654007', 'Cristina GN', '1234567891234567', '02/20', '344'),
+('Gustavo ', 'Quezada ', 'Tezoco', 'la margar', '12345', '2712459295', 'yo', '1234567890123456', '04/20', '123');
 
 -- --------------------------------------------------------
 
@@ -198,7 +254,7 @@ ALTER TABLE `compras`
 -- AUTO_INCREMENT de la tabla `compras`
 --
 ALTER TABLE `compras`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

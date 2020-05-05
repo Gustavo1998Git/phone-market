@@ -48,7 +48,7 @@ session_start();
  <h1>Agregar producto - Administrador </h1> 
  <br>
 
- <form action="agregar.php" method="POST">
+ <form action="agregar.php" method="POST" enctype="multipart/form-data">
 
     <p> <h2>ID</h2> <input type="text" name="ID"></p>
     <p> <h2>Nombre del producto</h2> <input type="text" name="NomP"></p>
@@ -56,14 +56,9 @@ session_start();
     <p> <h2>Existencias</h2> <input type="text" name="Exis"></p>
     <p> <h2>Precio</h2> <input type="text" name="Pre"></p>
     <p> <h2>Imagen</h2> 
-
- <form name="subida-imagenes" type="POST" enctype="multipart/formdata" >
- <input type="file" name="imagen" accept="image/gif,image/png,image/jpg"  />
- <!--<p> <label>Imagen Informacion</label>
- <form name="subida-imagenes" type="POST" enctype="multipart/formdata" ><input type="file" name="imagen" />-->
-
- <p> <h2>Tipo:Celular/Tablet/Accesorios</h2> <input type="text" name="Tipo"></p>
-     <input type="submit" value="Agregar Producto" id="boton">
+    <input type="file" name="imagen" accept="image/gif,image/png,image/jpg"  />
+    <p> <h2>Tipo:Celular/Tablet/Accesorios</h2> <input type="text" name="Tipo"></p>
+    <input type="submit" value="Agregar Producto" id="boton">
 
  </form>
 

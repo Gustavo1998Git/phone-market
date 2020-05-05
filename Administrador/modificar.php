@@ -52,7 +52,7 @@ $Result = $mysql->query( $Query );
 while($row =$Result->fetch_array()) {	    
     ?>
 
-   <form action="guardarCambios.php" target="" method="POST">
+   <form action="guardarCambios.php" target="" method="POST" enctype="multipart/form-data">
             <TABLE  ALIGN="CENTER"  style="margin: auto;" >
               
                  <TR>
@@ -75,6 +75,12 @@ while($row =$Result->fetch_array()) {
                     <th><strong>Precio: </strong> </th>
                     <td><input type=text size=40 name="Precio" value=" <?php printf($row["Precio"]); ?>  ">
                     </td>
+
+                </TR>
+                <TR>
+                    <th><strong>Imagen: </strong> </th>
+                    <td><input type=text size=40 name="Img" value=" <?php printf($row["Img"]); ?>  " readonly> <br>
+                    Nueva:<input type="file" name="imagen" accept="image/gif,image/png,image/jpg"  /></td>
 
                 </TR>
             </TABLE>

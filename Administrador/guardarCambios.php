@@ -37,17 +37,20 @@ session_start();
     </div>
 
 <?php 
-$Id=$_POST["Id"];
-$Nombre=$_POST["Nombre"];
-$Descripcion=$_POST["Descripcion"];
-$Existencias=$_POST["Existencias"];
-$Precio=$_POST["Precio"];
-
+$Id=$_REQUEST["Id"];
+$Nombre=$_REQUEST["Nombre"];
+$Descripcion=$_REQUEST["Descripcion"];
+$Existencias=$_REQUEST["Existencias"];
+$Precio=$_REQUEST["Precio"];
+$nombreimg=$_FILES['imagen']['name'];
+$archivo=$_FILES['imagen']['tmp_name'];
+$ruta="../todasim/".$nombreimg;
+move_uploaded_file($archivo,$ruta);
 
 $mysql = new mysqli("localhost", "root", "", "phone-market");
 
 
-    $Query= "UPDATE productos SET Nombre='$Nombre', Descripcion='$Descripcion', Existencias='$Existencias', Precio='$Precio' WHERE Id='".$Id."'";
+    $Query= "UPDATE productos SET Nombre='$Nombre', Descripcion='$Descripcion', Existencias='$Existencias', Precio='$Precio',Img='$nombreimg' WHERE Id='".$Id."'";
 
     $Result = $mysql->query( $Query );
 

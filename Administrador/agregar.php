@@ -36,22 +36,33 @@ session_start();
             </ul>
     </div>
     <?php 
+        $id=$_REQUEST['ID'];
+        $nombre=$_REQUEST['NomP'];
+        $descrip=$_REQUEST['Descr'];
+        $existencias=$_REQUEST['Exis'];
+        $precio=$_REQUEST['Pre'];
+        
+        $nombreimg=$_FILES['imagen']['name'];
+        
+        $archivo=$_FILES['imagen']['tmp_name'];
+        $ruta="../todasim/".$nombreimg;
+        move_uploaded_file($archivo,$ruta);
+
+        $tipo=$_REQUEST['Tipo'];
+
+        $mysql = new mysqli("localhost", "root", "", "phone-market");
+        $Query= "INSERT INTO productos  (Id,Nombre,Descripcion,Existencias,Precio,Img,Tipo) VALUES('".$id."','".$nombre."','".$descrip."','".$existencias."','".$precio."','".$nombreimg."','".$tipo."')";
 
 
+        $Result = $mysql->query($Query);
 
-$mysql = new mysqli("localhost", "root", "", "phone-market");
-         $Query= "INSERT INTO productos  (Id,Nombre,Descripcion,Existencias,Precio,Img,Tipo) VALUES('".$_POST['ID']."','".$_POST['NomP']."','".$_POST['Descr']."','".$_POST['Exis']."','".$_POST['Pre']."','".$_POST['imagen']."','".$_POST['Tipo']."')";
+        if($Result!=null){
+            print("Su Registro Fue exitoso");
+        }
+        else{
+            print("No se pudo agregar");
 
-
-$Result = $mysql->query($Query);
-
-if($Result!=null){
-   	print("Su Registro Fue exitoso");
-}
-else{
-  	print("No se pudo agregar");
-
-}
+        }
 
 	 
    ?>
