@@ -71,7 +71,6 @@ $Result = $mysql->query( $Query );
            ?>
 		   <tr>
 		   <td> <a href="modificar.php?Id=<?php print($id); ?>"> <?php print($nom); ?> </a>  </td>
-           <input type="file" name="imagen" accept="image/gif,image/png,image/jpg"  />
 
 
            </tr>
